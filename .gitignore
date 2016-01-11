@@ -1,0 +1,5 @@
+.idea/
+control-my-home.iml
+node_modules/
+npm-debug.log
+src/.env

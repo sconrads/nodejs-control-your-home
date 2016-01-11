@@ -1,0 +1,22 @@
+extends layout
+block content
+    include topnavigation
+    script(src='/javascripts/telldus-client-garasje.js')
+
+    .container-fluid
+        .row
+            .col-sm-4
+                h3 Garasje
+            .col-sm-8
+                button(class="btn btn-primary btn-lg btn-block", onClick=('switchOn(370693)')) Åpne/lukke garasjeport
+    p
+    .container-fluid
+        .row
+            .col-sm-4
+                h3 Motorvarmer
+            .col-sm-4
+                button(class="btn btn-primary btn-lg btn-block btn-success", onClick=('switchOn(587075)')) Slå på
+            .col-sm-4
+                button(class="btn btn-lg btn-block btn-danger", onClick=('switchOff(587075)')) Slå av
+
+    include footer

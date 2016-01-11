@@ -1,0 +1,25 @@
+extends layout
+block content
+    include topnavigation
+    script(src='/javascripts/squeezebox-http.js')
+
+    .container-fluid
+        .row
+            .col-sm-6
+                button(class="btn popovers btn-lg btn-block", onClick=('nrkP1()')) NRK P1 Østlandssendingen
+                p
+                button(class="btn popovers btn-lg btn-block", onClick=('nrkP1s()')) NRK P1 Sørlandet
+                p
+                button(class="btn popovers btn-lg btn-block", onClick=('nrkP3()')) NRK P3
+                p
+                button(class="btn popovers btn-lg btn-block", onClick=('kveldsmusikk()')) Kveldsmusikk
+                p
+                button(class="btn popovers btn-lg btn-block", onClick=('hyggligmedfart()')) Stasmusikk
+            .col-sm-6
+                button(class="btn popovers btn-lg btn-block btn-success", onClick=('paa()')) Skru på musikken i stua
+                p
+                button(class="btn popovers btn-lg btn-block btn-danger", onClick=('av()')) Skru av musikken i stua
+
+    include footer
+
+

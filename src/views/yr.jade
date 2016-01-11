@@ -1,0 +1,23 @@
+extends layout
+block content
+    include topnavigation
+
+    .container-fluid
+        .row
+            .col-sm-12
+                table(class="table table-striped")
+                    thead
+                        tr
+                            th Dato
+                            th Ikon
+                            th Temperatur
+                            th Nedbør
+                    tbody
+                        for result in langtidsvarsel
+                            tr
+                                td #{result.from}
+                                td #{result.icon}
+                                td #{result.temperature}
+                                td #{result.rain}
+
+    include footer

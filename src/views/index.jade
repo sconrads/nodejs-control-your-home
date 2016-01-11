@@ -1,0 +1,40 @@
+extends layout
+block content
+
+    .col-sm-12
+        table(class="table table-striped")
+            thead
+                tr
+                    th Været nå
+                    th Temperatur
+                    th Nedbør
+                    th Oppdatert
+                    th
+            tbody
+                tr
+                    td #{varsel.icon}
+                    td #{varsel.temperature}
+                    td #{varsel.rain}
+                    td #{varsel.from}
+                    td
+                        a(class="btn btn-primary btn-lg btn-block", href='/') Oppdater
+
+
+    .container-fluid
+        .row
+            .col-sm-6
+                a(class="btn btn-primary btn-lg btn-block", href='/varme') Varme
+                p
+                a(class="btn btn-primary btn-lg btn-block", href='/musikk') Musikk
+                p
+                a(class="btn btn-primary btn-lg btn-block", href='/lys') Lys
+                p
+                //a(class="btn btn-primary btn-lg btn-block", href='/sensorer') Sensorer
+            .col-sm-6
+                a(class="btn btn-primary btn-lg btn-block", href='/garasje') Bil
+                p
+                a(class="btn btn-primary btn-lg btn-block", href='/sanntid') Bussavganger
+                p
+                a(class="btn btn-primary btn-lg btn-block", href='/yr') Langtidsvarsel
+                p
+

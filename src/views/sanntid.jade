@@ -1,0 +1,25 @@
+extends layout
+block content
+    include topnavigation
+    script(src='/javascripts/sanntid-client.js')
+
+    .container-fluid
+        .row
+            .col-sm-12
+                table(class="table table-striped")
+                    thead
+                        tr
+                            th Linje
+                            th Endeholdeplass
+                            th Tidspunkt
+                    tbody
+                        for result in avganger
+                            tr
+                                td #{result.line}
+                                td #{result.name}
+                                td #{result.time}
+            .col-sm-12
+                a(class="btn btn-primary btn-lg btn-block", href='/sanntid') Oppdater
+
+    include footer
+
